@@ -1,4 +1,10 @@
 package com.aluracursos.challenges.forohub.domain.course.topic;
 
-public record DataUpdateTopic() {
+import jakarta.validation.constraints.NotBlank;
+
+public record DataUpdateTopic(
+        String title,
+        String message,
+        String status
+) {
 }
