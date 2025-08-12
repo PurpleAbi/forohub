@@ -15,6 +15,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
 @RequestMapping ("/topicos")
+//@SecurityRequirement(name = "bearer-key")
 public class TopicController {
 
     private final ForumService forumService;

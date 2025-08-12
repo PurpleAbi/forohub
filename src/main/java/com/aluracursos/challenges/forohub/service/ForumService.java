@@ -21,7 +21,7 @@ public class ForumService {
     private final CourseRepository courseRepository;
 
     public TopicDTO createTopic(DataTopicCreation newTopic){
-        var profile = profileRepository.findByName(newTopic.authorName())
+        var profile = profileRepository.findByUsername(newTopic.authorName())
             .orElseGet(() -> profileRepository.save(new ProfileEntity(newTopic.authorName())));
         var course = courseRepository.findByName(newTopic.courseName())
             .orElseGet(() -> courseRepository.save(new CourseEntity(newTopic.courseName(), newTopic.category())));
@@ -61,6 +61,6 @@ public class ForumService {
         } else {
             return 0;
         }
-
     }
+
 }

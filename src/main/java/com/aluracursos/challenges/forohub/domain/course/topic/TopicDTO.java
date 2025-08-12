@@ -11,6 +11,6 @@ public record TopicDTO(
 ) {
     public TopicDTO(TopicEntity topic) {
         this(topic.getId(), topic.getTitle(), topic.getMessage(),
-             topic.getCourse().getName(), topic.getAuthor().getName(), topic.getStatus());
+             topic.getCourse().getName(), topic.getAuthor().getUsername(), topic.getStatus());
     }
 }
